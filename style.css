@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watchFrame {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    position: relative;
+    box-shadow: -3px 3px 14px 0px #d9d9d9;
+}
+
+.watchFrame::before
+{
+    content: '';
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    box-shadow:inset -2px 2px 14px 0px #e6e6e6;
+    border-radius: 100%;
+    top:5%;
+    left: 5%;
+}
+.hand {
+    position: absolute;
+    border-radius:1px;
+    box-shadow: 0 0 1px #505050;
+}
+
+.sec {
+    height: 40%;
+    width: 2px;
+    background-color: #ff3232;
+    transform-origin: bottom;
+    left: calc(50% - 1px);
+    top: 10%;
+}
+
+.min {
+    height: 35%;
+    width: 4px;
+    background-color: #181818;
+    transform-origin: bottom;
+    left: calc(50% - 2px);
+    top: 15%;
+}
+
+.hour {
+    height: 32%;
+    width: 4px;
+    background-color: #3232ff;
+    transform-origin: bottom;
+    left: calc(50% - 2px);
+    top: 18%;
+}
+.circle{
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 15px;
+    top: calc(50% - 7.5px);
+    left:calc(50% - 7.5px);
+    position: absolute;
+    z-index: 1;
+    box-shadow:-1px 1px 5px 0px #cacaca;
+}
+.numbers{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 100%;
+}
+.numbers > span{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    transform: rotate(calc(var(--deg) * 30deg));
+    display: flex;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #5d5d5d;
+}
+.numbers > span::before{
+    content:attr(data);
+    position: absolute;
+    top: 10%;
+}
+.numbers > span:nth-child(1)::before{
+    transform:rotate(calc(1 * -30deg))
+}
+.numbers > span:nth-child(2)::before{
+    transform:rotate(calc(2 * -30deg))
+}
+.numbers > span:nth-child(3)::before{
+    transform:rotate(calc(3 * -30deg))
+}
+.numbers > span:nth-child(4)::before{
+    transform:rotate(calc(4 * -30deg))
+}
+.numbers > span:nth-child(5)::before{
+    transform:rotate(calc(5 * -30deg))
+}
+.numbers > span:nth-child(6)::before{
+    transform:rotate(calc(6 * -30deg))
+}
+.numbers > span:nth-child(7)::before{
+    transform:rotate(calc(7 * -30deg))
+}
+.numbers > span:nth-child(8)::before{
+    transform:rotate(calc(8 * -30deg))
+}
+.numbers > span:nth-child(9)::before{
+    transform:rotate(calc(9 * -30deg))
+}
+.numbers > span:nth-child(10)::before{
+    transform:rotate(calc(10 * -30deg))
+}
+.numbers > span:nth-child(11)::before{
+    transform:rotate(calc(11 * -30deg))
+}
